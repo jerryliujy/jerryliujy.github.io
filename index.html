@@ -20,6 +20,22 @@
     .date { float: right; color: #888; font-size: 0.95em; }
     .role { color: #1772d0; font-weight: bold; }
     .award { color: #d2691e; }
+    a {
+      color: #1772d0;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s, box-shadow 0.2s;
+      border-bottom: 1px dashed #b3d1f7;
+      padding: 1px 2px;
+      border-radius: 3px;
+    }
+    a:hover {
+      color: #125099;
+      background: #f0f7ff;
+      box-shadow: 0 1px 4px #e3eaf3;
+      border-bottom: 1px solid #1772d0;
+      text-decoration: none;
+    }
     @media (max-width: 600px) {
       .container { padding: 10px; }
       h1 { font-size: 1.5em; }
@@ -32,13 +48,12 @@
     <h1>Jingyuan Liu</h1>
     <div class="basic-info">
       <span><i class="fa-solid fa-envelope"></i><a href="mailto:jerryliujy@gmail.com">jerryliujy@gmail.com</a></span>
-      <span><i class="fa-solid fa-house"></i><a href="https://jingyuanliu.github.io" target="_blank">jingyuanliu.github.io</a></span>
       <span><i class="fa-brands fa-github"></i><a href="https://github.com/jerryliujy" target="_blank">github.com/jerryliujy</a></span>
       <span><i class="fa-brands fa-weixin"></i>ljy-050801</span>
     </div>
 
     <div class="statement">
-      <!-- 这里填写你的个人陈述（Personal Statement） -->
+      Hi! I'm Jingyuan Liu(刘静远), a sophomore student at Fudan University majoring in Software Engineering. I will be an exchange student at University of Toronto in Fall 2025. My research interests lie in learning-based robotic manipulation, embodied AI, and world models. I am currently working as a student intern at the Fudan Vision and Learning Lab under the supervision of Zuxuan Wu, where I focus on developing algorithms for robotic manipulation tasks. I am passionate about advancing the field of AI and robotics through innovative research and practical applications. Besides my academic pursuits, I am also a football⚽ lover.
     </div>
 
     <div class="section">
@@ -46,7 +61,9 @@
       <b>Fudan University</b>, Shanghai, China <span class="date">2023 -- Present</span><br>
       <i>B.S. in Software Engineering</i>, expected June 2027<br>
       GPA: 3.71/4.00<br>
-      Major Courses: Artificial Intelligence (Honor Class): A, Computer Graphics: A, Introduction to Robotic Programming: A
+      <a href="transcript-fdu.pdf" download class="transcript-link">
+        <i class="fa-solid fa-download"></i> Transcript
+      </a>
     </div>
 
     <div class="section">
@@ -65,8 +82,8 @@
       </ul>
       <b>Fudan Public Performance and Information Research Center</b>, Shanghai, China <span class="date">2024.06 -- 2025.02</span><br>
       <span class="role">Student Intern</span> (Advisor: <a href="https://software.fudan.edu.cn/29398/list.htm" target="_blank">Junyu Niu</a>)<br>
+      Participated in the development of LLM for taxation applications, focusing on database construction and data analysis.
       <ul>
-        <li>Participated in the development of LLM for taxation applications, focusing on database construction and data analysis.</li>
         <li>Data collection, annotation and feature extraction using LLMs.</li>
         <li>Audio data processing.</li>
       </ul>
