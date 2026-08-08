@@ -16,7 +16,10 @@
     h1 { margin: 0 0 8px; font: 700 clamp(2.25rem, 5vw, 3.5rem)/1.05 Arial, Helvetica, sans-serif; letter-spacing: -.055em; }
     .subtitle { margin: 0 0 22px; color: var(--accent); font: 600 .9rem/1.4 Arial, Helvetica, sans-serif; letter-spacing: .09em; text-transform: uppercase; }
     .bio { max-width: 660px; margin: 0; font-size: 1.08rem; }
-    .links { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 20px; font: .94rem Arial, Helvetica, sans-serif; }
+    .links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+    .icon-link { display: inline-grid; width: 34px; height: 34px; place-items: center; border: 1px solid #c9d8da; border-radius: 50%; color: var(--accent); transition: background .18s, color .18s, transform .18s; }
+    .icon-link:hover { background: var(--accent); color: #fff; text-decoration: none; transform: translateY(-1px); }
+    .icon-link svg { width: 17px; height: 17px; fill: currentColor; }
     .profile-photo { width: 190px; aspect-ratio: 1; display: grid; place-items: center; overflow: hidden; border: 1px solid #ccd9dc; border-radius: 3px; background: linear-gradient(135deg, #dcebed, #f7f2e8); color: #6f7f83; font: .8rem Arial, Helvetica, sans-serif; letter-spacing: .07em; text-transform: uppercase; }
     .profile-photo img { width: 100%; height: 100%; object-fit: cover; }
     section { border-top: 1px solid var(--line); padding-top: 24px; margin-top: 14px; }
@@ -34,7 +37,7 @@
     .project { padding: 2px 0 26px; }
     .project + .project { border-top: 1px solid var(--line); padding-top: 25px; }
     .project h3 { margin: 0 0 7px; font: 700 1.18rem/1.35 Arial, Helvetica, sans-serif; letter-spacing: -.01em; }
-    .project p { max-width: 700px; margin: 0; }
+    .project p { margin: 0; }
     .status { display: inline-block; margin: 0 0 8px; color: var(--accent); font: 700 .72rem/1 Arial, Helvetica, sans-serif; letter-spacing: .1em; text-transform: uppercase; }
     footer { padding-top: 20px; color: var(--muted); font: .82rem Arial, Helvetica, sans-serif; }
     @media (max-width: 650px) { main { width: min(100% - 28px, 960px); margin-top: 32px; } .intro { grid-template-columns: 1fr; gap: 25px; padding-bottom: 40px; } .profile-photo { width: 145px; } .publication { grid-template-columns: 1fr; gap: 18px; } .paper-visual { min-height: 125px; max-width: 280px; } }
@@ -48,8 +51,15 @@
         <p class="subtitle">Robotics &amp; Embodied AI</p>
         <p class="bio">I am an undergraduate student in Software Engineering at Fudan University. I work on vision-language-action models, reward modeling, and continual robot learning, with a focus on robust robotic manipulation.</p>
         <nav class="links" aria-label="Contact links">
-          <a href="mailto:jerryliujy@gmail.com">Email</a>
-          <a href="https://jerryliujy.github.io">Homepage</a>
+          <a class="icon-link" href="mailto:jerryliujy@gmail.com" aria-label="Email" title="Email">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/></svg>
+          </a>
+          <a class="icon-link" href="resume.pdf" aria-label="Resume" title="Resume" target="_blank">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Zm1 7V3.5L18.5 9H15ZM8 13h8v1.5H8V13Zm0 3h8v1.5H8V16Zm0 3h5v1.5H8V19Z"/></svg>
+          </a>
+          <a class="icon-link" href="https://github.com/jerryliujy" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.23c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.21-3.37-1.21-.46-1.2-1.11-1.51-1.11-1.51-.91-.64.07-.63.07-.63 1 .07 1.54 1.06 1.54 1.06.9 1.57 2.35 1.12 2.92.86.09-.67.35-1.12.64-1.38-2.22-.26-4.56-1.15-4.56-5.1 0-1.13.39-2.05 1.04-2.77-.1-.27-.45-1.31.1-2.73 0 0 .85-.28 2.75 1.06A9.24 9.24 0 0 1 12 6.8c.85 0 1.71.12 2.51.34 1.9-1.34 2.75-1.06 2.75-1.06.55 1.42.2 2.46.1 2.73.65.72 1.04 1.64 1.04 2.77 0 3.96-2.35 4.83-4.58 5.08.36.32.68.93.68 1.88 0 1.36-.01 2.46-.01 2.8 0 .27.18.59.69.49A10.23 10.23 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z"/></svg>
+          </a>
         </nav>
       </div>
       <!-- Replace this placeholder with: <img src="assets/profile.jpg" alt="Jingyuan Liu"> -->
