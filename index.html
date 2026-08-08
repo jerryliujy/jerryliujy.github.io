@@ -25,10 +25,8 @@
     section { border-top: 1px solid var(--line); padding-top: 24px; margin-top: 14px; }
     h2 { margin: 0 0 25px; font: 600 1.05rem/1.2 Arial, Helvetica, sans-serif; letter-spacing: .12em; text-transform: uppercase; }
     .publication { display: grid; grid-template-columns: 230px 1fr; gap: 28px; align-items: start; padding-bottom: 38px; }
-    .paper-visual { min-height: 150px; padding: 18px; display: flex; flex-direction: column; justify-content: space-between; background: #173f4d; color: #f6fbfb; border-radius: 3px; box-shadow: 0 10px 24px rgba(27, 57, 67, .13); }
-    .paper-visual small { font: 700 .67rem/1 Arial, Helvetica, sans-serif; letter-spacing: .14em; opacity: .76; }
-    .paper-visual strong { max-width: 180px; font: 700 2.05rem/.9 Arial, Helvetica, sans-serif; letter-spacing: -.08em; }
-    .paper-visual span { color: #a7d7ce; font: .73rem Arial, Helvetica, sans-serif; }
+    .paper-figure { margin: 0; }
+    .paper-figure img { display: block; width: 100%; border: 1px solid #d7e0e1; border-radius: 3px; box-shadow: 0 10px 24px rgba(27, 57, 67, .13); }
     .paper-title { margin: -3px 0 8px; font: 700 1.36rem/1.28 Arial, Helvetica, sans-serif; letter-spacing: -.02em; }
     .authors, .venue { margin: 0; color: var(--muted); font-size: .96rem; }
     .venue { margin-top: 3px; }
@@ -40,7 +38,7 @@
     .project p { margin: 0; }
     .status { display: inline-block; margin: 0 0 8px; color: var(--accent); font: 700 .72rem/1 Arial, Helvetica, sans-serif; letter-spacing: .1em; text-transform: uppercase; }
     footer { padding-top: 20px; color: var(--muted); font: .82rem Arial, Helvetica, sans-serif; }
-    @media (max-width: 650px) { main { width: min(100% - 28px, 960px); margin-top: 32px; } .intro { grid-template-columns: 1fr; gap: 25px; padding-bottom: 40px; } .profile-photo { width: 145px; } .publication { grid-template-columns: 1fr; gap: 18px; } .paper-visual { min-height: 125px; max-width: 280px; } }
+    @media (max-width: 650px) { main { width: min(100% - 28px, 960px); margin-top: 32px; } .intro { grid-template-columns: 1fr; gap: 25px; padding-bottom: 40px; } .profile-photo { width: 145px; } .publication { grid-template-columns: 1fr; gap: 18px; } .paper-figure { max-width: 280px; } }
   </style>
 </head>
 <body>
@@ -69,11 +67,9 @@
     <section aria-labelledby="publications">
       <h2 id="publications">Publications</h2>
       <article class="publication">
-        <div class="paper-visual" aria-label="ACE-Brain paper visual">
-          <small>Embodied Foundation Model</small>
-          <strong>ACE<br>Brain</strong>
-          <span>Physical Agentic AI</span>
-        </div>
+        <figure class="paper-figure">
+          <img src="assets/ace-brain-0.5-overview.png" alt="ACE-Brain-0.5 overview: a unified embodied model for perception, decision-making, interaction, self-monitoring, and self-improvement.">
+        </figure>
         <div>
           <h3 class="paper-title"><a href="https://arxiv.org/abs/2607.04426">ACE-Brain-0.5: A Unified Embodied Foundation Model for Physical Agentic AI</a></h3>
           <p class="authors"><strong>ACE-Brain Team</strong></p>
