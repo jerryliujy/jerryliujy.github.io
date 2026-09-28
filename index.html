@@ -24,6 +24,7 @@
     section { border-top: 1px solid var(--line); padding-top: 24px; margin-top: 14px; }
     h2 { margin: 0 0 25px; font: 600 1.05rem/1.2 Arial, Helvetica, sans-serif; letter-spacing: .12em; text-transform: uppercase; }
     .publication { display: grid; grid-template-columns: minmax(340px, 420px) minmax(0, 1fr); gap: 32px; align-items: start; padding-bottom: 38px; }
+    .publication + .publication { border-top: 1px solid var(--line); padding-top: 32px; }
     .paper-figure { margin: 0; }
     .paper-figure img { display: block; width: 100%; border: 1px solid #d7e0e1; border-radius: 3px; box-shadow: 0 10px 24px rgba(27, 57, 67, .13); }
     .paper-title { margin: -3px 0 8px; font: 700 1.36rem/1.28 Arial, Helvetica, sans-serif; letter-spacing: -.02em; }
@@ -66,7 +67,18 @@
     </header>
 
     <section aria-labelledby="publications">
-      <h2 id="publications">Publications</h2>
+      <h2 id="publications">Publications &amp; Manuscripts</h2>
+      <article class="publication">
+        <figure class="paper-figure">
+          <img src="assets/reap-overview.png" alt="ReAP combines visual failure detection with action-conditioned future-risk prediction for runtime robot monitoring.">
+        </figure>
+        <div>
+          <h3 class="paper-title">ReAP: From Visual Failure Recognition to Action-Conditioned Risk Prediction for Runtime Failure Monitoring</h3>
+          <p class="authors"><strong>Jingyuan Liu</strong>, Yunpeng Qing, Changxu Wei, Zhi Hou</p>
+          <p class="venue">Under review at ICLR 2027</p>
+          <p class="paper-description">ReAP is a policy-decoupled runtime monitoring framework that combines visual failure detection with action-conditioned future-risk prediction in a failure-relevant latent space.</p>
+        </div>
+      </article>
       <article class="publication">
         <figure class="paper-figure">
           <img src="assets/ace-brain-0.5-overview.png" alt="ACE-Brain-0.5 overview: a unified embodied model for perception, decision-making, interaction, self-monitoring, and self-improvement.">
@@ -84,14 +96,9 @@
       <h2 id="ongoing-projects">Ongoing Projects</h2>
       <div class="project-list">
         <article class="project">
-          <span class="status">Manuscript in preparation</span>
-          <h3>Runtime Monitoring for Failure Prediction and Detection</h3>
-          <p>Leading research on a policy-decoupled runtime monitoring framework for robotic manipulation: anticipating execution failures before they happen and identifying them quickly after onset.</p>
-        </article>
-        <article class="project">
-          <span class="status">Manuscript in preparation</span>
-          <h3>Image-Space Action Representation</h3>
-          <p>Exploring how robot actions can be represented directly in image space, so visual representations can be better aligned with action generation for manipulation.</p>
+          <span class="status">Ongoing research</span>
+          <h3>Action Prediction via Wrist-Camera Motion</h3>
+          <p>Predicting robot actions as future wrist-camera poses, using changes in camera position and orientation to represent robot motion for manipulation.</p>
         </article>
       </div>
     </section>
