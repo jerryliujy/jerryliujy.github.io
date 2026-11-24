@@ -39,13 +39,33 @@
     .status { display: inline-block; margin: 0 0 8px; color: var(--accent); font: 700 .72rem/1 Arial, Helvetica, sans-serif; letter-spacing: .1em; text-transform: uppercase; }
     footer { padding-top: 20px; color: var(--muted); font: .82rem Arial, Helvetica, sans-serif; }
     @media (max-width: 720px) { main { width: min(100% - 28px, 960px); margin-top: 32px; } .intro { padding-bottom: 40px; } .publication { grid-template-columns: 1fr; gap: 18px; } .paper-figure { max-width: 520px; } }
+  
+    :root { --ink:#172841; --muted:#61738a; --accent:#2366a1; --line:#dce7f0; --wash:#f7fafd; }
+    body {font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:linear-gradient(145deg,#edf5fc 0%,#fff 34%,#f8fbfd 100%);}
+    .site-header { border-bottom:1px solid #dfe9f2; background:rgba(255,255,255,.87); }
+    .header-inner {max-width:1120px;margin:auto;padding:17px 30px;display:flex;justify-content:space-between;align-items:center;}
+    .wordmark {font-weight:750;font-size:1.08rem;letter-spacing:-.03em;color:var(--ink)} .wordmark span,.name-dot {color:#3188c7}
+    .header-inner nav {display:flex;gap:28px;font-size:.9rem;font-weight:600}.header-inner nav a{color:#435a70}
+    main { width:min(100% - 48px,1060px);margin:45px auto 75px;padding:0; }
+    .intro {background:linear-gradient(112deg,#f1f8fd,#fff 78%);border:1px solid #dcebf6;border-radius:20px;padding:45px 50px;box-shadow:0 14px 45px #345a7a0d;margin-bottom:56px;}
+    .intro-label {color:#3478a9;letter-spacing:.15em;font-size:.72rem;font-weight:750;margin:0 0 12px}
+    h1 {font-family:inherit; font-size:clamp(2.6rem,5.5vw,4.1rem);letter-spacing:-.055em;}
+    .subtitle {font-family:inherit;letter-spacing:.06em;margin-bottom:20px}.bio {max-width:880px;font-size:1rem;line-height:1.75;color:#374c61}
+    .icon-link {width:40px;height:40px;background:white;border-color:#d4e4ef}.links{gap:11px;margin-top:24px}
+    section {border:0;margin:0;padding:0} h2 {font-family:inherit;font-size:1.55rem;line-height:1.2;font-weight:700;letter-spacing:-.025em;text-transform:none;margin:0 0 26px}
+    .publication {grid-template-columns:minmax(260px,350px) minmax(0,1fr);gap:32px;background:#fff;border:1px solid #e0ebf3;border-radius:16px;padding:23px;margin:0 0 18px;box-shadow:0 6px 24px #24456609;align-items:center}
+    .publication + .publication {border:1px solid #e0ebf3;padding:23px}.paper-figure img {border:0;border-radius:9px;box-shadow:none;background:#f3f6f8}
+    .paper-title {font-family:inherit;font-size:1.15rem;line-height:1.38;margin:0 0 8px}.authors,.venue{font-size:.89rem;line-height:1.55}.paper-description{font-size:.92rem;line-height:1.65;margin-top:12px}.publication p:last-child{font-size:.9rem;font-weight:600}
+    footer {padding-top:24px;border-top:1px solid var(--line)}
+    @media(max-width:720px){main{width:min(100% - 30px,1060px);margin-top:24px}.header-inner{padding:15px}.header-inner nav{gap:16px}.intro{padding:30px 24px;margin-bottom:38px}.publication,.publication + .publication{grid-template-columns:1fr;padding:18px;gap:16px}.paper-figure{max-width:none}}
   </style>
 </head>
 <body>
-  <main>
-    <header class="intro">
+  <div class="site-header"><div class="header-inner"><a class="wordmark" href="#top">Jingyuan Liu<span>.</span></a><nav aria-label="Page navigation"><a href="#about">About</a><a href="#publications">Research</a><a href="jingyuanliu-cv.pdf">CV</a></nav></div></div>
+  <main id="top">
+    <header class="intro" id="about">
       <div>
-        <h1>Jingyuan Liu</h1>
+        <p class="intro-label">FUDAN UNIVERSITY · EMBODIED AI</p><h1>Jingyuan Liu<span class="name-dot">.</span></h1>
         <p class="subtitle">Embodied AI &amp; Robot Learning</p>
         <p class="bio">Hi there! I’m Jingyuan, currently an undergraduate student at Fudan University. I work on vision-language-action models, reward modeling and reinforcement learning for robotics, world models for manipulation, and continual, self-improving robot learning. My long-term vision is to develop general-purpose and trustworthy robots that can perform a wide range of everyday tasks, continually adapt in new environments, and operate reliably and safely in the real world.</p>
         <p class="bio">Outside of research, I’m also a big fan of football and baseball!</p>
@@ -105,7 +125,8 @@
         <div>
           <h3 class="paper-title">ReAP: From Visual Failure Recognition to Action-Conditioned Risk Prediction for Runtime Failure Monitoring</h3>
           <p class="authors"><strong>Jingyuan Liu</strong>, Yunpeng Qing, Changxu Wei, Zhi Hou</p>
-          <p class="venue">Under review at ICLR 2027</p>
+          <p class="venue">arXiv preprint arXiv:2610.16309, 2026</p>
+          <p><a href="https://arxiv.org/abs/2610.16309">Paper on arXiv</a></p>
           <p class="paper-description">ReAP is a policy-decoupled runtime monitoring framework that combines visual failure detection with action-conditioned future-risk prediction in a failure-relevant latent space.</p>
         </div>
       </article>
