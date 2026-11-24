@@ -58,17 +58,24 @@
     .paper-title {font-family:inherit;font-size:1.15rem;line-height:1.38;margin:0 0 8px}.authors,.venue{font-size:.89rem;line-height:1.55}.paper-description{font-size:.92rem;line-height:1.65;margin-top:12px}.publication p:last-child{font-size:.9rem;font-weight:600}
     footer {padding-top:24px;border-top:1px solid var(--line)}
     @media(max-width:720px){main{width:min(100% - 30px,1060px);margin-top:24px}.header-inner{padding:15px}.header-inner nav{gap:16px}.intro{padding:30px 24px;margin-bottom:38px}.publication,.publication + .publication{grid-template-columns:1fr;padding:18px;gap:16px}.paper-figure{max-width:none}}
+
+    body { background:#fff; color:#253347; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    .academic-layout {max-width:1120px;margin:0 auto;display:grid;grid-template-columns:230px minmax(0,1fr);gap:80px;padding:80px 30px 80px;}
+    .profile {position:sticky;top:60px;align-self:start}.profile-mark {display:grid;place-items:center;width:92px;height:92px;border-radius:50%;background:#e7f0f7;color:#275f8a;font:600 1.8rem Georgia,serif;letter-spacing:-.06em;margin-bottom:24px}
+    .profile h1 {font-family:inherit;font-weight:700;font-size:1.55rem;line-height:1.2;letter-spacing:-.03em;margin:0 0 10px}.profile-role {font-size:.95rem;line-height:1.6;color:#526477;margin:0}.profile-field {font-size:.83rem;line-height:1.5;color:#537797;margin:15px 0}
+    .profile .links {gap:7px;margin:18px 0 30px}.profile .icon-link {width:35px;height:35px;border-radius:8px}.profile-nav {border-top:1px solid #e2e9ef;padding-top:20px;display:grid;gap:13px;font-size:.9rem;font-weight:600}.profile-nav a{color:#536778}.profile-nav a:hover{color:#2366a1}
+    main {width:auto;min-width:0;margin:0;padding:0}.about {padding:0 0 48px;margin:0 0 44px;border-bottom:1px solid #dfe7ed}.section-kicker {font-size:.72rem;letter-spacing:.16em;font-weight:750;color:#387dab;margin:0 0 10px}.about h2,section h2 {font-family:Georgia,serif;font-weight:normal;letter-spacing:-.025em;font-size:2rem;line-height:1.2;text-transform:none;color:#172c41;margin:0 0 20px}.about .bio {color:#48596a;font-size:1rem;line-height:1.75;margin:0 0 12px}
+    .publication,.publication + .publication {display:grid;grid-template-columns:245px minmax(0,1fr);align-items:start;gap:26px;padding:25px 0;margin:0;border:0;border-top:1px solid #e3e9ee;border-radius:0;box-shadow:none;background:none}.paper-figure img{border:1px solid #e2eaf0;border-radius:5px;box-shadow:none}.paper-title{font-size:1.08rem;line-height:1.4;letter-spacing:0}.paper-title a{color:#1b537b}.paper-description{margin:9px 0;font-size:.9rem}.authors,.venue{font-size:.87rem}.publication p:last-child{margin-bottom:0}footer{margin-top:30px}
+    @media(max-width:760px){.academic-layout{display:block;padding:35px 20px}.profile{position:static;border-bottom:1px solid #dfe7ed;margin-bottom:35px;padding-bottom:20px}.profile-mark{width:65px;height:65px;margin-bottom:15px}.profile-nav{display:flex;flex-wrap:wrap;gap:18px}.profile .links{margin:15px 0}.about{padding-bottom:24px;margin-bottom:30px}.publication,.publication + .publication{grid-template-columns:1fr;gap:14px;padding:20px 0}.paper-figure{max-width:450px}}
   </style>
 </head>
 <body>
-  <div class="site-header"><div class="header-inner"><a class="wordmark" href="#top">Jingyuan Liu<span>.</span></a><nav aria-label="Page navigation"><a href="#about">About</a><a href="#publications">Research</a><a href="jingyuanliu-cv.pdf">CV</a></nav></div></div>
-  <main id="top">
-    <header class="intro" id="about">
-      <div>
-        <p class="intro-label">FUDAN UNIVERSITY · EMBODIED AI</p><h1>Jingyuan Liu<span class="name-dot">.</span></h1>
-        <p class="subtitle">Embodied AI &amp; Robot Learning</p>
-        <p class="bio">Hi there! I’m Jingyuan, currently an undergraduate student at Fudan University. I work on vision-language-action models, reward modeling and reinforcement learning for robotics, world models for manipulation, and continual, self-improving robot learning. My long-term vision is to develop general-purpose and trustworthy robots that can perform a wide range of everyday tasks, continually adapt in new environments, and operate reliably and safely in the real world.</p>
-        <p class="bio">Outside of research, I’m also a big fan of football and baseball!</p>
+  <div class="academic-layout">
+    <aside class="profile">
+      <div class="profile-mark" aria-hidden="true">JL</div>
+      <h1>Jingyuan Liu</h1>
+      <p class="profile-role">Undergraduate Researcher<br>Fudan University</p>
+      <p class="profile-field">Embodied AI · Robot Learning</p>
         <nav class="links" aria-label="Contact links">
           <a class="icon-link" href="mailto:23302010010@m.fudan.edu.cn" aria-label="Email" title="Email">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/></svg>
@@ -83,11 +90,15 @@
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.25 3A2.25 2.25 0 1 0 5.25 7.5 2.25 2.25 0 0 0 5.25 3ZM3.3 8.7h3.9V21H3.3V8.7Zm6.35 0h3.74v1.68h.05c.52-.99 1.8-2.04 3.71-2.04 3.97 0 4.7 2.61 4.7 6.01V21h-3.9v-5.9c0-1.41-.03-3.23-1.97-3.23-1.98 0-2.28 1.54-2.28 3.13V21H9.65V8.7Z"/></svg>
           </a>
         </nav>
-      </div>
-    </header>
-
+      <nav class="profile-nav" aria-label="Page navigation"><a href="#about">About</a><a href="#publications">Publications</a><a href="jingyuanliu-cv.pdf">Curriculum Vitae</a></nav>
+    </aside>
+    <main>
+      <section class="about" id="about"><p class="section-kicker">ABOUT</p><h2>Hi, I’m Jingyuan.</h2>
+        <p class="bio">Hi there! I’m Jingyuan, currently an undergraduate student at Fudan University. I work on vision-language-action models, reward modeling and reinforcement learning for robotics, world models for manipulation, and continual, self-improving robot learning. My long-term vision is to develop general-purpose and trustworthy robots that can perform a wide range of everyday tasks, continually adapt in new environments, and operate reliably and safely in the real world.</p>
+        <p class="bio">Outside of research, I’m also a big fan of football and baseball!</p>
+      </section>
     <section aria-labelledby="publications">
-      <h2 id="publications">Publications &amp; Manuscripts</h2>
+      <p class="section-kicker">RESEARCH</p><h2 id="publications">Selected publications</h2>
       <article class="publication">
         <figure class="paper-figure">
           <a href="https://acerobotics2025.github.io/ACE-CaP/" target="_blank" rel="noopener">
@@ -145,5 +156,6 @@
 
     <footer>© 2026 Jingyuan Liu</footer>
   </main>
+  </div>
 </body>
 </html>
